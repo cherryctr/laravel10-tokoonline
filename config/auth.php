@@ -40,6 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'jwt',			// <-- set ke jwt
+            'provider' => 'customers',	// <-- set providers ke customers
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -64,6 +70,16 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+
+        'customers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Customer::class,
+        ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
