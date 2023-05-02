@@ -100,7 +100,8 @@
             <h6 class="collapse-header">KATEGORI & PRODUK</h6>
             <a class="collapse-item {{ Request::is('admin/category*') ? ' active' : '' }}" href="{{ route('admin.category.index') }}">KATEGORI</a>
 
-            <a class="collapse-item {{ Request::is('admin/product*') ? ' active' : '' }}" href="#">PRODUK</a>
+            <a class="collapse-item {{ Request::is('admin/product*') ? ' active' : '' }}" href="{{ route('admin.product.index') }}">PRODUK</a>
+
           </div>
         </div>
       </li>
@@ -110,28 +111,32 @@
       </div>
 
       <li class="nav-item {{ Request::is('admin/order*') ? ' active' :  '' }}">
-        <a class="nav-link" href="#">
-          <i class="fas fa-shopping-cart"></i>
-          <span>ORDERS</span></a>
+        <a class="nav-link" href="{{ route('admin.order.index') }}">
+           <i class="fas fa-shopping-cart"></i>
+           <span>ORDERS</span>
+        </a>
       </li>
 
       <li class="nav-item {{ Request::is('admin/customer*') ? ' active' :  '' }}">
-        <a class="nav-link" href="#">
-          <i class="fas fa-users"></i>
-          <span>CUSTOMERS</span></a>
-      </li>
+        <a class="nav-link" href="{{ route('admin.customer.index') }}">
+           <i class="fas fa-users"></i>
+           <span>CUSTOMERS</span>
+        </a>
+    </li>
 
-      <li class="nav-item {{ Request::is('admin/slider*') ? ' active' :  '' }}">
-        <a class="nav-link" href="#">
-          <i class="fas fa-laptop"></i>
-          <span>SLIDERS</span></a>
-      </li>
+    <li class="nav-item {{ Request::is('admin/slider*') ? ' active' :  '' }}">
+        <a class="nav-link" href="{{ route('admin.slider.index') }}">
+           <i class="fas fa-laptop"></i>
+           <span>SLIDERS</span>
+         </a>
+     </li>
 
-      <li class="nav-item {{ Request::is('admin/profile*') ? ' active' :  '' }}">
-        <a class="nav-link" href="#">
-          <i class="fas fa-user-circle"></i>
-          <span>PROFILE</span></a>
-      </li>
+     <li class="nav-item {{ Request::is('admin/profile*') ? ' active' :  '' }}">
+        <a class="nav-link" href="{{ route('admin.profile.index') }}">
+           <i class="fas fa-user-circle"></i>
+           <span>PROFILE</span>
+         </a>
+     </li>
 
       <li class="nav-item {{ Request::is('admin/user*') ? ' active' :  '' }}">
         <a class="nav-link" href="#">
