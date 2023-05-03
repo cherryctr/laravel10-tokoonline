@@ -138,11 +138,12 @@
          </a>
      </li>
 
-      <li class="nav-item {{ Request::is('admin/user*') ? ' active' :  '' }}">
-        <a class="nav-link" href="#">
-          <i class="fas fa-users"></i>
-          <span>USERS</span></a>
-      </li>
+     <li class="nav-item {{ Request::is('admin/user*') ? ' active' :  '' }}">
+        <a class="nav-link" href="{{ route('admin.user.index') }}">
+            <i class="fas fa-users"></i>
+            <span>USERS</span>
+         </a>
+     </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

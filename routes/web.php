@@ -29,8 +29,9 @@ Route::prefix('admin')->group(function () {
 
         Route::get('/profile', [ProfileController::class, 'index'])->name('admin.profile.index');
         Route::get('/customer', [CustomerController::class, 'index'])->name('admin.customer.index');
-        
 
+        //route user
+        Route::resource('/user', UserController::class, ['except' => ['show'], 'as' => 'admin']);
 
 
     });
